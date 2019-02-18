@@ -1,0 +1,176 @@
+/* 输入框样式 */
+.searshOrder{
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #bfcbd9;
+    box-sizing: border-box;
+    color: #1f2d3d;
+    display: block;
+    font-size: inherit;
+    height: 36px;
+    line-height: 1;
+    outline: 0;
+    padding: 3px 10px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 300px;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    position: relative;
+    font-size: 14px;
+    float:left;
+    margin-right: -4px;
+}
+.searshOrder:hover{
+   border-color:#4db3ff;
+}
+.delInput{
+    position: absolute;
+    z-index: 1000;
+    display: inline-block;
+    height: 36px;
+    width: 20px;
+    margin-right: 30px;
+    margin-left: -20px;
+    line-height: 36px;
+    color: gray;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 备料下拉框样式 */
+.floatLeft{
+    float:left;
+    margin-bottom: 20px;
+}
+.optionStock{
+    width:150px; 
+    margin-left: 10px
+}
+
+.isStdckMenu{
+    width: 170px;
+    height: 37px;
+    background: #20a0ff;
+    display: inline-block;
+    color: white;
+    border-radius: 4px;
+    line-height: 37px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+
+/* 彭燕昆样式 */
+/* .datePickerClass .el-input__inner {
+    cursor: pointer;
+} */
+.datePickerClass .el-icon-arrow-left{
+	padding-left: 5px;
+	color:rgba(0,0,0,.54);
+}
+.datePickerClass .el-icon-arrow-right{
+	padding-right: 5px;
+	color: rgba(0,0,0,.54);
+}
+.datePickerClass .el-icon-d-arrow-left,
+.datePickerClass .el-icon-d-arrow-right{
+	color: rgba(0,0,0,.26);
+}
+.prodict-title{
+	font-weight: 600;
+    line-height: 25px;
+    padding-bottom: 8px;
+}
+.horizontalDirection{
+	display: flex;
+	align-items: center;
+	height: 60px;
+	padding-bottom: 5px;
+	align-content: space-around;
+}
+.horizontalDirection .breadcrumb{
+	flex: 1;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;	
+}
+.inputNumberCls{
+	margin-top: 8px;
+}
+.inputNumberCls span:first-child{
+	right: 0;
+	left:0;
+	border: 0;
+}
+.inputNumberCls span{
+	border: 0;
+	width: 28px;
+}
+.inputNumberCls span:first-child:hover{
+	color: #20a0ff;
+}
+.inputNumberCls div{
+	width: 58%;
+	margin-left: 28px;
+	text-align: center;
+}
+.inputNumberCls input[type='text']{
+	padding-right: 0;
+	padding-left: 3px;
+
+}
+
+/* 彭燕昆样式完成*/
+
+/* 分页左侧边框不为0 */
+.el-pager li.active+li{
+    padding-left: 5px;
+}
+
+.headerStyle{
+    width:100%;
+    display:flex;
+    flex:1;
+}
+.titleWidth{
+    width:50%;
+}
+.submitBut{
+    text-align:right;
+    width:50%;
+}
+
+/* 添加表格距离顶部的距离 */
+.tableMargin{
+    margin-top:15px;
+}
+/* 变革中输入框样式 */
+.el-table .cell .useNumber{
+    width: 80px;
+    height: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

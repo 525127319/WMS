@@ -1,0 +1,334 @@
+@charset "utf-8";
+@import "iconfonts.css";
+@import "reset.css";
+@ratio:1px;
+@fs:rgba(255,255,255,.56);
+@h1c:#1f97fd;
+@bgc:#0b0f28;
+@lig:rgba(46,61,147,.15);
+@tub:rgba(255,255,255,.53);
+@gold:#ffc107;
+@green:#1bc85e;
+@bule00a0e9:#00a0e9;
+@huise:#496283;
+.flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+/*flex宽度*/
+
+.flex(@num) {
+    -webkit-box-flex: @num;
+    -moz-box-flex: @num;
+    -webkit-flex: @num;
+    -ms-flex: @num;
+    flex: @num;
+}
+
+
+/*flex垂直*/
+
+.flex-v {
+    .flex;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
+/*flex居中*/
+
+.align(@pos) {
+    -webkit-box-align: @pos;
+    -webkit-align-items: @pos;
+    -ms-flex-align: @pos;
+    align-items: @pos;
+}
+
+
+/*flex 居中*/
+
+.justify(@pos) {
+    -webkit-box-pack: @pos;
+    -webkit-justify-content: @pos;
+    -ms-flex-pack: @pos;
+    justify-content: @pos;
+}
+
+
+/*flex-wrap 换行*/
+
+.flex-wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+// 最大的
+.spectaculars{
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover;     
+    padding: 0 62/@ratio;
+    overflow: auto;
+    // 头部
+    .spectaculars-top{
+        width: 100%;
+        text-align: center;
+        h1{
+            width: 100%;
+            color: @h1c;
+            font-size: 60/@ratio;
+        }
+        .spectaculars-text{
+            width: 100%;
+            .flex;
+            .justify(space-between);
+            margin-bottom: 10/@ratio;
+            &>div{
+                width: 41%;
+                height: 86/@ratio;
+                line-height: 86/@ratio;
+                color: @fs;
+                font-size: 30/@ratio;
+            }
+            .text-left{
+                background: url(../images/tiao_r.png) no-repeat;
+                background-size: cover;
+                padding-left: 40/@ratio;
+                text-align: left;
+                span{
+                    i{
+                        margin-right: 20/@ratio;
+                    }
+                }
+            }
+            .text-right{
+                background: url(../images/tiao_l.png) no-repeat;
+                background-size: cover;
+                padding-right: 40/@ratio;
+                text-align: right;
+            }
+        }
+    }
+    // 头部end
+    // 主体开始
+    .spectaculars-main{
+        width: 100%;
+        .flex;
+        .flex-wrap;
+        .main-li{
+            width: 50%;
+            background: @lig;
+            margin-bottom: 10/@ratio;
+            padding-left: 25/@ratio;
+            // margin-left: 10/@ratio;
+            padding-right: 80/@ratio;
+            &:nth-child(odd){
+                border-right: 5/@ratio solid #0b0f28;
+            }
+            &:nth-child(even){
+                border-left: 5/@ratio solid #0b0f28;
+            }  
+            &>h2{
+                width: 100%;
+                margin-top: 32/@ratio;
+                margin-bottom: 70/@ratio;
+                font-size: 42/@ratio;
+                text-align: left;
+                color: @h1c;
+                background: url(../images/right.png) no-repeat;
+                background-size: contain;
+                text-indent:100/@ratio;
+            }  
+            .li-center{
+                width: 100%;
+                .flex;
+                .center-ech{
+                    width: 50%;
+                    height: 700/@ratio;
+                    padding-left: 80/@ratio;
+                    &:nth-child(1){
+                        border-right: 1px solid rgba(255, 255, 255, 0.26);
+                    }
+
+
+
+
+
+                    &.no-border{
+                        border: none;
+                        // 备料样式
+                        .stock-main{
+                            width: 100%;
+                            .flex;
+                            .stock-main-l{
+                                width: 50%;
+                                position: relative;
+                                &:first-child{
+                                    &:before{
+                                        content: "";
+                                        width: 1px;
+                                        height: 65%;
+                                        position: absolute;
+                                        background: rgba(255, 255, 255, 0.26);
+                                        right: 0;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                                .stock-title{
+                                    position: absolute;
+                                    top: 0;
+                                    left: 16%;
+                                    font-size: 32/@ratio;
+                                    color: @fs;
+                                }
+
+                            }
+                            
+                        }
+                    }
+                    // 下面的数据说明
+                    .storage-fot{
+                        font-size: 22/@ratio;
+                        color: @fs;
+                        padding-left:50/@ratio;
+                        li{
+                            padding-bottom: 40/@ratio;
+                        }
+                        .ico{
+                            display: inline-block;
+                            height: 20/@ratio;
+                            border-radius: 30/@ratio;
+                        }
+                        .no{
+                            width: 60/@ratio;
+                            background: @huise;
+                        }
+                        .yes{
+                            width: 80/@ratio;
+                            background: @gold;
+                        }
+                        // 备料
+                        .on_stock{
+                            width: 60/@ratio;
+                            background: @bule00a0e9;                           
+                        }
+                        .yes_stock{
+                            width: 80/@ratio;
+                            background: @gold;                          
+                        }
+                    }  
+                    // 专案
+                    .projects{
+                        .flex;
+                        .justify(space-around);
+                        .flex-wrap;
+                        li{
+                            padding-bottom: 40/@ratio;
+                            width: 50%;
+                            .projects1{
+                                width: 80/@ratio;
+                                background: @gold;                                  
+                            }
+                            .projects2{
+                                width: 60/@ratio;
+                                background: @bule00a0e9;   
+                            }
+                            .projects3{
+                                width: 50/@ratio;
+                                background: @green;
+                            }
+                            .projects4{
+                                width: 30/@ratio;
+                                background: @huise;
+                            }
+                        }
+                    }                 
+                }
+                
+                .storage{
+                    .flex;
+                    .storage-main{
+                        width: 50%;
+                        position: relative;
+                    }
+                    .storage-top{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: @fs;
+                        font-size: 32/@ratio;
+                        small{
+                            font-size: 26/@ratio;
+                        }
+                    }
+                }
+            }    
+            // 下面的文字
+            .li-footer{
+                margin-left: 80/@ratio;
+                font-size: 26/@ratio;
+                background: #ffffff08;
+                line-height: 46/@ratio;
+                padding: 5/@ratio 0;
+                color: rgba(255, 255, 255, .23);
+                margin-top: 40/@ratio;
+                margin-bottom: 20/@ratio;
+                position: relative;
+                .f_bg{
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 82/@ratio;
+                    height: 46/@ratio;
+                    background: url(../images/new.png) no-repeat;
+                    background-size: cover;
+                    margin-left: 20/@ratio;
+                    margin-right: 30/@ratio;
+                    position: absolute;
+                }
+                .footer-text{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 130/@ratio;
+                }
+            }
+            // 标题样式
+            .ech-text{
+                line-height: 50/@ratio;
+                text-align: center;
+                font-size: 32/@ratio;
+                color: @fs;
+            }
+            // 月份
+            .month-main{
+                width: 100%;
+                position: relative;
+                padding-left: 80/@ratio;
+                .month{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 26/@ratio;
+                    color: @fs;                   
+                }
+            }
+        }
+    }
+    // 主体end
+    // canvas 样式
+    #storage-left,#storage-right,#stock-left,#stock-right{
+        width: 100%;
+        height: 480/@ratio;
+    }
+    #quality,#standard,#storage-msg,#picking,#month_warehouse{
+        width: 100%;
+        height: 650/@ratio;
+    }  
+}
